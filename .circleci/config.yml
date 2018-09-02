@@ -23,9 +23,9 @@ jobs:
       - image: circleci/node:8.11.3
     working_directory: ~/repo
     steps:
-      - run: npm i -g azure-cli
-      - run: npm i -g azure-functions-core-tools
-      - run: npm i -g azure-functions-pack
+      - run: sudo npm i -g azure-cli
+      - run: sudo npm i -g azure-functions-core-tools
+      - run: sudo npm i -g azure-functions-pack
       - run: azure login -u ${AZURE_USERNAME} -p ${AZURE_PASSWORD}
       - run: func azure functionapp publish test-api-123
 
