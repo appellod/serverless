@@ -22,5 +22,9 @@ project.lock.json
 appsettings.json
 local.settings.json
 
+test-results.xml
 .funcpack/
+.nyc_output/
+.test-results/
+coverage/
 node_modules/
