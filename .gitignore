@@ -22,5 +22,6 @@ project.lock.json
 appsettings.json
 local.settings.json
 
+test-results.xml
 .funcpack/
 node_modules/

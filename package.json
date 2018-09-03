@@ -12,8 +12,9 @@
         "migrations:create": "knex migrate:make",
         "migrations:rollback": "knex migrate:rollback",
         "start": "./scripts/start.sh",
-        "test": "./scripts/test.sh",
+        "test": "mocha --exit ./find-users/index.spec.js",
         "test:coverage": "nyc --reporter=html npm test",
+        "test:vsts": "mocha --exit --reporter mocha-junit-reporter ./find-users/index.spec.js",
         "test:watch": "./scripts/test-watch.sh",
         "watch": "./scripts/watch.sh",
         "watch:all": "./scripts/watch-all.sh"
@@ -86,6 +87,7 @@
         "chai-as-promised": "^7.1.1",
         "chai-http": "^4.0.0",
         "mocha": "^4.0.1",
+        "mocha-multi-reporters": "^1.1.7",
         "nock": "^9.0.13",
         "nodemon": "^1.18.3",
         "nyc": "^12.0.2",
