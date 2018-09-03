@@ -25,6 +25,7 @@ jobs:
     steps:
       - run: sudo npm i -g --unsafe-perm azure-cli
       - run: sudo npm i -g --unsafe-perm azure-functions-pack
+      - run: azure telemetry --disable
       - run: azure login -u ${AZURE_USERNAME} -p ${AZURE_PASSWORD}
       - run: funcpack pack ./
       - run: func azure functionapp publish test-api-123
