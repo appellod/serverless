@@ -15,7 +15,10 @@ fs.readdir(CODE_COVERAGE_DIRECTORY, (err, files)=> {
     reports.forEach((report)=> {
         let filePath = path.join(CODE_COVERAGE_DIRECTORY, report);
         let options = { 
-            url: "file://" + path.resolve(filePath)
+            url: "file://" + path.resolve(filePath),
+            extraCss: `
+                td.line-count a:not([name]) { display: block; }
+            `
         };
 
         fs.readFile(path.resolve(filePath), (err, data)=> {
