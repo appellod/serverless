@@ -1,0 +1,10 @@
+{
+  "include": [
+    "find-users/index.spec.js"
+  ],
+  "reporter": [
+    "cobertura",
+    "html"
+  ],
+  "report-dir": "./.test-results/coverage"
+}
