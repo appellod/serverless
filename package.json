@@ -12,6 +12,7 @@
         "migrations:create": "knex migrate:make",
         "migrations:rollback": "knex migrate:rollback",
         "pack": "funcpack pack ./",
+        "process-coverage": "node ./scripts/process-coverage-report.js",
         "start": "./scripts/start.sh",
         "test": "mocha --exit ./find-users/index.spec.js",
         "test:coverage": "nyc --reporter=html npm test",
